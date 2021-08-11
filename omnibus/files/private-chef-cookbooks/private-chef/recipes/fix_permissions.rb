@@ -34,4 +34,4 @@ end
 #     user 'root'
 #     only_if { node['private_chef']['nginx']['nginx_no_root'] }
 #   end
-end
+#end
