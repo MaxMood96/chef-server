@@ -51,6 +51,18 @@ nginx_tempfile_dir = File.join(nginx_dir, 'tmp')
   end
 end
 
+[
+  nginx_log_dir,
+  nginx_dir,
+  # '/opt/opscode/embedded/nginx',
+  # "#{node['private_chef']['nginx']['dir']}",
+  # "#{node['private_chef']['nginx']['log_directory']}",
+].each do |nginx_no_root_perms_fix_path|
+  execute "find #{nginx_no_root_perms_fix_path} -user 'root' -exec chown #{node['private_chef']['user']['username']} {} \\;" do
+    user 'root'
+    only_if { node['private_chef']['nginx']['nginx_no_root'] }
+  end
+
 # Create empty error log files
 %w(access.log error.log current).each do |logfile|
   file File.join(nginx_log_dir, logfile) do
