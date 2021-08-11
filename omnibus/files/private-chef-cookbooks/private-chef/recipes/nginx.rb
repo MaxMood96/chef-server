@@ -62,6 +62,7 @@ end
     user 'root'
     only_if { node['private_chef']['nginx']['nginx_no_root'] }
   end
+end
 
 # Create empty error log files
 %w(access.log error.log current).each do |logfile|
