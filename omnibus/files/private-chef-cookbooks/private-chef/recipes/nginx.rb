@@ -54,7 +54,7 @@ end
 [
   nginx_log_dir,
   nginx_dir,
-  # '/opt/opscode/embedded/nginx',
+  '/opt/opscode/embedded/nginx',
   # "#{node['private_chef']['nginx']['dir']}",
   # "#{node['private_chef']['nginx']['log_directory']}",
 ].each do |nginx_no_root_perms_fix_path|
