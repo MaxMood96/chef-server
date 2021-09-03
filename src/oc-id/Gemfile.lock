@@ -168,7 +168,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.9)
-    config (2.2.3)
+    config (3.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
     crass (1.0.6)
@@ -192,7 +192,7 @@ GEM
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
-    dry-schema (1.7.0)
+    dry-schema (1.7.1)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.8, >= 0.8.3)
       dry-core (~> 0.5, >= 0.5)
@@ -593,7 +593,7 @@ DEPENDENCIES
   capybara (~> 3.33)
   chef (~> 17)
   coffee-rails (~> 5.0)
-  config (~> 2.2, >= 2.2.1)
+  config (~> 3.1)
   doorkeeper (~> 4.0)
   factory_girl_rails (~> 4.4.0)
   foundation-rails!
