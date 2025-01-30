@@ -31,12 +31,13 @@ dependency "openssl-fips-config" if fips_mode?
 # the backend
 dependency "postgresql96-bin" # for upgrading 9.6 -> 13
 dependency "postgresql13"
-dependency "redis" # dynamic routing controls
+dependency "keydb" # dynamic routing controls
 dependency "haproxy"
 dependency "opensearch" # used by search
 
 # moved earlier because it is external to this repo and pinned, so should change infrequently
 dependency "chef" # for embedded chef-client -z runs (built from main - build last)
+dependency "knife"
 
 dependency "private-chef-ctl" # additional project-specific private-chef-ctl subcommands
 

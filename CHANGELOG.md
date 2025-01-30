@@ -1,20 +1,132 @@
 # Chef Server Changelog
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
-<!-- latest_release 15.8.1 -->
-## [15.8.1](https://github.com/chef/chef-server/tree/15.8.1) (2023-10-17)
+<!-- latest_release 15.10.32 -->
+## [15.10.32](https://github.com/chef/chef-server/tree/15.10.32) (2025-01-30)
 
 #### Merged Pull Requests
-- Fixes redis-lb logrotate file creation ownership [#3697](https://github.com/chef/chef-server/pull/3697) ([fretb](https://github.com/fretb))
+- Bump rexml from 3.2.6 to 3.3.9 in /src/chef-server-ctl [#3933](https://github.com/chef/chef-server/pull/3933) ([dependabot[bot]](https://github.com/dependabot[bot]))
 <!-- latest_release -->
 
-<!-- release_rollup since=15.8.0 -->
-### Changes since 15.8.0 release
+<!-- release_rollup since=15.10.27 -->
+### Changes since 15.10.27 release
 
 #### Merged Pull Requests
-- Fixes redis-lb logrotate file creation ownership [#3697](https://github.com/chef/chef-server/pull/3697) ([fretb](https://github.com/fretb)) <!-- 15.8.1 -->
+- Bump rexml from 3.2.6 to 3.3.9 in /src/chef-server-ctl [#3933](https://github.com/chef/chef-server/pull/3933) ([dependabot[bot]](https://github.com/dependabot[bot])) <!-- 15.10.32 -->
+- Bump rexml from 3.2.5 to 3.3.9 in /src/oc-id [#3932](https://github.com/chef/chef-server/pull/3932) ([dependabot[bot]](https://github.com/dependabot[bot])) <!-- 15.10.31 -->
+- Remove duplicate heading [#3921](https://github.com/chef/chef-server/pull/3921) ([IanMadd](https://github.com/IanMadd)) <!-- 15.10.30 -->
+- Remove hosted chef from docs [#3956](https://github.com/chef/chef-server/pull/3956) ([IanMadd](https://github.com/IanMadd)) <!-- 15.10.29 -->
+- Docs | Added warning along with track_total_hits [#3973](https://github.com/chef/chef-server/pull/3973) ([talktovikas](https://github.com/talktovikas)) <!-- 15.10.28 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [15.10.27](https://github.com/chef/chef-server/tree/15.10.27) (2025-01-09)
+
+#### Merged Pull Requests
+- Space changes to trigger version bump. [#3965](https://github.com/chef/chef-server/pull/3965) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Pinning meck to 0.9.2. [#3966](https://github.com/chef/chef-server/pull/3966) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- postgresql 13.14 -&gt; 13.18 (CVE-2024-7348) [#3952](https://github.com/chef/chef-server/pull/3952) ([lbakerchef](https://github.com/lbakerchef))
+- Knife search issue: when search entries are more than 10K [#3951](https://github.com/chef/chef-server/pull/3951) ([talktovikas](https://github.com/talktovikas))
+- update license_scout version [#3971](https://github.com/chef/chef-server/pull/3971) ([muthuja](https://github.com/muthuja))
+- Updated opensearch version to 1.3.20 . [#3972](https://github.com/chef/chef-server/pull/3972) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+<!-- latest_stable_release -->
+
+## [15.10.21](https://github.com/chef/chef-server/tree/15.10.21) (2024-12-04)
+
+#### Merged Pull Requests
+- Added telemetry section in README [#3870](https://github.com/chef/chef-server/pull/3870) ([kalroy](https://github.com/kalroy))
+- Update README file [#3905](https://github.com/chef/chef-server/pull/3905) ([kalroy](https://github.com/kalroy))
+- License Usage Pointer Update [#3906](https://github.com/chef/chef-server/pull/3906) ([dishanktiwari2501](https://github.com/dishanktiwari2501))
+- added updated production url spelling [#3908](https://github.com/chef/chef-server/pull/3908) ([vviveksharma](https://github.com/vviveksharma))
+- Build tests for embedded Chef-Server in Automate [#3917](https://github.com/chef/chef-server/pull/3917) ([talktovikas](https://github.com/talktovikas))
+- Open-Search  upgraded to 1.3.19 [#3931](https://github.com/chef/chef-server/pull/3931) ([talktovikas](https://github.com/talktovikas))
+- License Enforcement Application [#3929](https://github.com/chef/chef-server/pull/3929) ([jashaik](https://github.com/jashaik))
+- Telemetry automate changes. [#3946](https://github.com/chef/chef-server/pull/3946) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Telemetry code refactor. [#3948](https://github.com/chef/chef-server/pull/3948) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+
+## [15.10.12](https://github.com/chef/chef-server/tree/15.10.12) (2024-08-29)
+
+#### Merged Pull Requests
+- Bump omnibus-software from `e4e5868` to `ca4f96b` in /omnibus [#3839](https://github.com/chef/chef-server/pull/3839) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- upgrade openssl to 1.0.2zi [#3842](https://github.com/chef/chef-server/pull/3842) ([talktovikas](https://github.com/talktovikas))
+- Dependency download using unencrypted communication channel. [#3851](https://github.com/chef/chef-server/pull/3851) ([talktovikas](https://github.com/talktovikas))
+- update rack in oc-chef-pedant [#3849](https://github.com/chef/chef-server/pull/3849) ([talktovikas](https://github.com/talktovikas))
+- Bump omnibus-software from `ca4f96b` to `1659822` in /omnibus [#3873](https://github.com/chef/chef-server/pull/3873) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Upgrading to node.js 14.21.3 in oc-id [#3831](https://github.com/chef/chef-server/pull/3831) ([RoyShravani](https://github.com/RoyShravani))
+- CVE fixes for oc-id [#3861](https://github.com/chef/chef-server/pull/3861) ([RoyShravani](https://github.com/RoyShravani))
+- Update Netlify deploy command [#3791](https://github.com/chef/chef-server/pull/3791) ([IanMadd](https://github.com/IanMadd))
+- Update github labeler so it works [#3886](https://github.com/chef/chef-server/pull/3886) ([IanMadd](https://github.com/IanMadd))
+- Added updated according to omnitruck url changes [#3869](https://github.com/chef/chef-server/pull/3869) ([vviveksharma](https://github.com/vviveksharma))
+- Enable licence usage data for Infra Server. [#3828](https://github.com/chef/chef-server/pull/3828) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Bump omnibus-software from `1659822` to `cd0dbdf` in /omnibus [#3879](https://github.com/chef/chef-server/pull/3879) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump omnibus from `82dae89` to `11057b3` in /omnibus [#3876](https://github.com/chef/chef-server/pull/3876) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Removed ubuntu-16.04 and el-7 from builder [#3888](https://github.com/chef/chef-server/pull/3888) ([jashaik](https://github.com/jashaik))
+- activesupport &lt;= 7.1.3.2 [#3894](https://github.com/chef/chef-server/pull/3894) ([lbakerchef](https://github.com/lbakerchef))
+- Bump omnibus from `11057b3` to `0633d00` in /omnibus [#3898](https://github.com/chef/chef-server/pull/3898) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump omnibus-software from `cd0dbdf` to `f9e2df6` in /omnibus [#3899](https://github.com/chef/chef-server/pull/3899) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Using keydb for caching dynamic routings [#3864](https://github.com/chef/chef-server/pull/3864) ([jashaik](https://github.com/jashaik))
+- Adding information about Key-DB in Chef-server CLI subcommands [#3889](https://github.com/chef/chef-server/pull/3889) ([talktovikas](https://github.com/talktovikas))
+- KeyDB Documentation draft.  [#3874](https://github.com/chef/chef-server/pull/3874) ([talktovikas](https://github.com/talktovikas))
+- Update the supported platforms [#3890](https://github.com/chef/chef-server/pull/3890) ([kalroy](https://github.com/kalroy))
+- Fix for 12.17.15 -&gt; 15.10.X upgrade [#3902](https://github.com/chef/chef-server/pull/3902) ([jashaik](https://github.com/jashaik))
+- Fixing verify pipeline fixes. [#3903](https://github.com/chef/chef-server/pull/3903) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+
+## [15.9.38](https://github.com/chef/chef-server/tree/15.9.38) (2024-05-30)
+
+#### Merged Pull Requests
+- Added postgres version 13.14. [#3790](https://github.com/chef/chef-server/pull/3790) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Bump omnibus-software from `b48e542` to `40ca2a9` in /omnibus [#3779](https://github.com/chef/chef-server/pull/3779) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump activesupport from 7.0.8 to 7.1.3.2 in /oc-chef-pedant [#3783](https://github.com/chef/chef-server/pull/3783) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump omnibus-software from `40ca2a9` to `4ea194c` in /omnibus [#3794](https://github.com/chef/chef-server/pull/3794) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rake from 13.1.0 to 13.2.0 in /src/chef-server-ctl [#3800](https://github.com/chef/chef-server/pull/3800) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rake from 13.1.0 to 13.2.0 in /oc-chef-pedant [#3797](https://github.com/chef/chef-server/pull/3797) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump mixlib-install from 3.12.28 to 3.12.30 in /src/chef-server-ctl [#3798](https://github.com/chef/chef-server/pull/3798) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump omnibus-software from `4ea194c` to `e4e5868` in /omnibus [#3809](https://github.com/chef/chef-server/pull/3809) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- unpin openresty and update plan.sh [#3781](https://github.com/chef/chef-server/pull/3781) ([poorndm](https://github.com/poorndm))
+- Bump rake from 13.2.0 to 13.2.1 in /oc-chef-pedant [#3805](https://github.com/chef/chef-server/pull/3805) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rack from 2.2.3.1 to 2.2.6.2 in /oc-chef-pedant [#3579](https://github.com/chef/chef-server/pull/3579) ([dependabot[bot]](https://github.com/dependabot[bot]))
+
+## [15.9.27](https://github.com/chef/chef-server/tree/15.9.27) (2024-03-20)
+
+#### Merged Pull Requests
+- testing adding this gpg key [#3778](https://github.com/chef/chef-server/pull/3778) ([sean-simmons-progress](https://github.com/sean-simmons-progress))
+- updating license scout to fix readme.md it gist [#3776](https://github.com/chef/chef-server/pull/3776) ([sean-simmons-progress](https://github.com/sean-simmons-progress))
+- Rubyracer fixing for verify pipeline. [#3787](https://github.com/chef/chef-server/pull/3787) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Bump open search version to 1.3.14 [#3785](https://github.com/chef/chef-server/pull/3785) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Added rocky9 to infra-server with latest omnibus version [#3720](https://github.com/chef/chef-server/pull/3720) ([muthuja](https://github.com/muthuja))
+- Infra server release for Amazon Linux 2023 [#3732](https://github.com/chef/chef-server/pull/3732) ([talktovikas](https://github.com/talktovikas))
+- Make onetrust key configurable [#3771](https://github.com/chef/chef-server/pull/3771) ([ayush-billore](https://github.com/ayush-billore))
+
+## [15.9.20](https://github.com/chef/chef-server/tree/15.9.20) (2024-01-10)
+
+#### Merged Pull Requests
+- Whitespace change to bump release version [#3752](https://github.com/chef/chef-server/pull/3752) ([marcparadise](https://github.com/marcparadise))
+- Upgrade restclient gem version in erchef [#3721](https://github.com/chef/chef-server/pull/3721) ([RajeshPaul38](https://github.com/RajeshPaul38))
+- [CHEF-6088 CHEF-6094 CHEF-6107] Cookie policy, Privacy policy, logo and favicon changes [#3737](https://github.com/chef/chef-server/pull/3737) ([ayush-billore](https://github.com/ayush-billore))
+- Update release announcement to use chef download page [#3754](https://github.com/chef/chef-server/pull/3754) ([kalroy](https://github.com/kalroy))
+- Correct some text in docs [#3698](https://github.com/chef/chef-server/pull/3698) ([IanMadd](https://github.com/IanMadd))
+- [CHEF-6100 CHEF-6112] GTM and OneTrust changes [#3738](https://github.com/chef/chef-server/pull/3738) ([ayush-billore](https://github.com/ayush-billore))
+- remove GTM scripts [#3759](https://github.com/chef/chef-server/pull/3759) ([ayush-billore](https://github.com/ayush-billore))
+- workaround to suppress expired certificate error. [#3761](https://github.com/chef/chef-server/pull/3761) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+
+## [15.9.12](https://github.com/chef/chef-server/tree/15.9.12) (2023-11-28)
+
+#### Merged Pull Requests
+- Fixes redis-lb logrotate file creation ownership [#3697](https://github.com/chef/chef-server/pull/3697) ([fretb](https://github.com/fretb))
+- Fix verify pipeline: The repository... does not have a Release file. [#3740](https://github.com/chef/chef-server/pull/3740) ([lbakerchef](https://github.com/lbakerchef))
+- added knife to omnibus dependency list. [#3739](https://github.com/chef/chef-server/pull/3739) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+- Update rack version from 2.2.6.2 -&gt; 2.2.6.4 because of possible DOS Vulnerability in Multipart MIME parsing chef-server-ctl [#3733](https://github.com/chef/chef-server/pull/3733) ([talktovikas](https://github.com/talktovikas))
+- Bump omnibus-software from `c44dea9` to `b48e542` in /omnibus [#3741](https://github.com/chef/chef-server/pull/3741) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump omnibus from `c66e97c` to `82dae89` in /omnibus [#3731](https://github.com/chef/chef-server/pull/3731) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rake from 13.0.6 to 13.1.0 in /omnibus [#3729](https://github.com/chef/chef-server/pull/3729) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rake from 13.0.6 to 13.1.0 in /oc-chef-pedant [#3728](https://github.com/chef/chef-server/pull/3728) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump rake from 13.0.6 to 13.1.0 in /src/chef-server-ctl [#3727](https://github.com/chef/chef-server/pull/3727) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump chefstyle from 2.2.2 to 2.2.3 in /src/chef-server-ctl [#3736](https://github.com/chef/chef-server/pull/3736) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump mixlib-install from 3.12.27 to 3.12.28 in /src/chef-server-ctl [#3723](https://github.com/chef/chef-server/pull/3723) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump activesupport from 7.0.4.2 to 7.0.8 in /oc-chef-pedant [#3702](https://github.com/chef/chef-server/pull/3702) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump selenium-webdriver from 4.7.1 to 4.12.0 in /src/oc-id [#3700](https://github.com/chef/chef-server/pull/3700) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump activesupport from 7.0.4.1 to 7.0.8 in /src/oc_bifrost/oc-bifrost-pedant [#3699](https://github.com/chef/chef-server/pull/3699) ([dependabot[bot]](https://github.com/dependabot[bot]))
+- Revert selenium-webdriver from 4.12.0 to 4.7.1 in /src/oc-id [#3742](https://github.com/chef/chef-server/pull/3742) ([sreepuramsudheer](https://github.com/sreepuramsudheer))
+
 ## [15.8.0](https://github.com/chef/chef-server/tree/15.8.0) (2023-10-05)
 
 #### Merged Pull Requests
@@ -28,7 +140,6 @@
 - Bump rack from 2.2.6.2 to 2.2.6.4 in /omnibus [#3627](https://github.com/chef/chef-server/pull/3627) ([dependabot[bot]](https://github.com/dependabot[bot]))
 - upgraded activestorage version from  6.1.4.6 to  6.1.4.7 [#3709](https://github.com/chef/chef-server/pull/3709) ([talktovikas](https://github.com/talktovikas))
 - Uplift oc-id to use ruby 3.0.1 and rails 7.0.4  [#3674](https://github.com/chef/chef-server/pull/3674) ([RoyShravani](https://github.com/RoyShravani))
-<!-- latest_stable_release -->
 
 ## [15.7.0](https://github.com/chef/chef-server/tree/15.7.0) (2023-06-14)
 

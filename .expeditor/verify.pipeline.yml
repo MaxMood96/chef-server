@@ -1,10 +1,16 @@
 ---
+env:
+  # Use the Go module mirror and checksum database by default.
+  # See https://proxy.golang.org for details.
+  GOPROXY: "https://proxy.golang.org,direct"
+  GOSUMDB: "sum.golang.org"
+
 expeditor:
   cached_folders:
     - vendor
   defaults:
     buildkite:
-      timeout_in_minutes: 30
+      timeout_in_minutes: 90
 
 steps:
 
@@ -131,10 +137,6 @@ steps:
           - LUALIB=~/.luarocks/lib/lua/5.2
           - COMPONENT=src/bookshelf
 
-# #########################################################################
-#   # Pedant Tests
-# #########################################################################
-
 - label: With chef-zero
   command:
     - /workdir/scripts/bk_tests/bk_install.sh
@@ -152,11 +154,13 @@ steps:
           - USE_OMNIBUS_FILES=0
           - PEDANT_OPTS="--skip-oc_id"
           - BUNDLE_GEMFILE=/workdir/oc-chef-pedant/Gemfile
+          - IS_AUTOMATE=false
 
 - label: With ChefFS=1
   command:
     - /workdir/scripts/bk_tests/bk_install.sh
-    - gem uninstall bundler -v '>= 2.0.1' -a
+    - gem install bundler -v 2.2.4
+    - gem uninstall bundler -v '> 2.2.4' -a
     - cp scripts/bk_tests/chef_zero-Gemfile oc-chef-pedant/Gemfile
     - bundle install --jobs=3 --retry=3 --path=/workdir/vendor/bundle
     - cd /workdir/oc-chef-pedant
@@ -171,3 +175,110 @@ steps:
           - PEDANT_OPTS="--skip-oc_id"
           - CHEF_FS=1
           - BUNDLE_GEMFILE=/workdir/oc-chef-pedant/Gemfile
+          - IS_AUTOMATE=false
+
+- label: automate_build
+  command:
+      - .expeditor/automate_build.sh
+  env:
+      ALLOW_LOCAL_PACKAGES: true
+      HAB_STUDIO_SUP: false
+      HAB_NONINTERACTIVE: true
+      GOPROXY: "https://proxy.golang.org,direct"
+  expeditor:
+    secrets:
+        HAB_STUDIO_SECRET_GITHUB_TOKEN:
+          account: github/chef
+          field: token
+        OPENSEARCH_ROOT_CA_PEM:
+          path: secret/a2/a2ha/opensearch
+          field: root-ca.pem
+        OPENSEARCH_ADMIN_PEM:
+          path: secret/a2/a2ha/opensearch
+          field: admin.pem
+        OPENSEARCH_ADMIN_KEY_PEM:
+          path: secret/a2/a2ha/opensearch
+          field: admin-key.pem
+        OPENSEARCH_NODE1_PEM:
+          path: secret/a2/a2ha/opensearch
+          field: node1.pem
+        OPENSEARCH_NODE1_KEY_PEM:
+          path: secret/a2/a2ha/opensearch
+          field: node1-key.pem
+    executor:
+        linux:
+          privileged: true
+
+# waiting for the automate build to finish before running the chef server tests
+- wait
+
+
+- label: "chef server"
+  command:
+    - .expeditor/chef_server.sh
+  env:
+    IS_AUTOMATE: true
+  timeout_in_minutes: 30 # longer timeout for chef-server
+  expeditor:
+    secrets:
+      A2_LICENSE:
+        path: secret/a2/license
+        field: license
+      A2_EXPIRED_LICENSE:
+        path: secret/a2/license
+        field: expLicense
+    executor:
+      linux:
+        privileged: true
+        environment:
+          - IS_AUTOMATE=true
+
+- label: "chef server only"
+  command:
+    - .expeditor/chef_server_only.sh
+  env:
+    IS_AUTOMATE: true
+  timeout_in_minutes: 20
+  expeditor:
+    secrets:
+      A2_LICENSE:
+        path: secret/a2/license
+        field: license
+      A2_EXPIRED_LICENSE:
+        path: secret/a2/license
+        field: expLicense
+    executor:
+      linux:
+        privileged: true
+        environment:
+          - IS_AUTOMATE=true
+
+
+- label: "ha chef server"
+  command:
+    - .expeditor/ha_chef_server.sh
+  env:
+    IS_AUTOMATE: true
+    DOCKER_CONFIG: /var/lib/buildkite-agent/.docker
+    HAB_BLDR_CHANNEL: "stable"
+    #HAB_STUDIO_SECRET_HAB_BLDR_CHANNEL: "curl8"
+    #HAB_FALLBACK_CHANNEL: "stable"
+    HAB_STUDIO_SECRET_HAB_FALLBACK_CHANNEL: "stable"
+    GOPROXY: "https://proxy.golang.org,direct"
+    GOSUMDB: "sum.golang.org"
+    PGGSSENCMODE: "disable"
+  timeout_in_minutes: 35
+  expeditor:
+    secrets:
+      A2_LICENSE:
+        path: secret/a2/license
+        field: license
+      A2_EXPIRED_LICENSE:
+        path: secret/a2/license
+        field: expLicense
+    executor:
+      linux:
+        privileged: true
+        single-use: true
+        environment:
+          - IS_AUTOMATE=true

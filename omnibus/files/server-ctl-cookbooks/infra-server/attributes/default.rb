@@ -344,6 +344,7 @@ default['private_chef']['opscode-erchef']['search_queue_mode'] = 'batch'
 default['private_chef']['opscode-erchef']['search_batch_max_size'] = '5000000'
 default['private_chef']['opscode-erchef']['search_batch_max_wait'] = '10'
 default['private_chef']['opscode-erchef']['search_auth_username'] = 'opensearch_user'
+default['private_chef']['opscode-erchef']['track_total_hits'] = false
 # default['private_chef']['opscode-erchef']['search_auth_password'] = "admin"
 # solr_service configuration for erchef. These are used to configure an opscoderl_httpc pool
 # of HTTP connecton workers.
@@ -748,6 +749,8 @@ default['private_chef']['oc_id']['sentry_dsn'] = nil
 default['private_chef']['oc_id']['sign_up_url'] = nil
 default['private_chef']['oc_id']['email_from_address'] = node['private_chef']['from_email']
 default['private_chef']['oc_id']['origin'] = node['private_chef']['api_fqdn']
+default['private_chef']['oc_id']['enable_onetrust'] = false
+default['private_chef']['oc_id']['onetrust_id'] = nil
 
 default['private_chef']['oc_id']['administrators'] = []
 
@@ -891,6 +894,8 @@ default['private_chef']['data_collector']['ibrowse_options'] = '[{connect_timeou
 # Select whether data_collector affects overall status in _status endpoint
 default['private_chef']['data_collector']['health_check'] = true
 
+default['private_chef']['ctl_command'] = "#{ChefUtils::Dist::Server::SERVER_CTL}"
+default['private_chef']['running_filepath'] = "/etc/#{ChefUtils::Dist::Org::LEGACY_CONF_DIR}/#{ChefUtils::Dist::Server::SERVER}-running.json"
 ##
 # Compliance Profiles
 ##

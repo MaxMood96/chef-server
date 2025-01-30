@@ -5,8 +5,8 @@ pkg_license=('Apache-2.0')
 pkg_deps=(
   core/sqitch_pg
   core/curl
-  core/node
-  core/ruby30
+  core/node14
+  core/ruby31/3.1.6/20240912144513
   core/rsync
   core/sed
   core/libffi
