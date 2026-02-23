@@ -1,9 +1,17 @@
 # Chef Server Changelog
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
-<!-- latest_release -->
+<!-- latest_release 15.10.92 -->
+## [15.10.92](https://github.com/chef/chef-server/tree/15.10.92) (2026-02-23)
+
+#### Merged Pull Requests
+- Updated soft_fail in the case of chef-server chef-server-only and ha-… [#4150](https://github.com/chef/chef-server/pull/4150) ([jashaik](https://github.com/jashaik))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=15.10.91 -->
+### Changes since 15.10.91 release
+
+#### Merged Pull Requests
+- Updated soft_fail in the case of chef-server chef-server-only and ha-… [#4150](https://github.com/chef/chef-server/pull/4150) ([jashaik](https://github.com/jashaik)) <!-- 15.10.92 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
