@@ -1,16 +1,17 @@
 # Chef Server Changelog
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
-<!-- latest_release 15.10.92 -->
-## [15.10.92](https://github.com/chef/chef-server/tree/15.10.92) (2026-02-23)
+<!-- latest_release 15.10.93 -->
+## [15.10.93](https://github.com/chef/chef-server/tree/15.10.93) (2026-02-23)
 
 #### Merged Pull Requests
-- Updated soft_fail in the case of chef-server chef-server-only and ha-… [#4150](https://github.com/chef/chef-server/pull/4150) ([jashaik](https://github.com/jashaik))
+- change pg client from 13 to 14 [#4148](https://github.com/chef/chef-server/pull/4148) ([punitmundra](https://github.com/punitmundra))
 <!-- latest_release -->
 
 <!-- release_rollup since=15.10.91 -->
 ### Changes since 15.10.91 release
 
 #### Merged Pull Requests
+- change pg client from 13 to 14 [#4148](https://github.com/chef/chef-server/pull/4148) ([punitmundra](https://github.com/punitmundra)) <!-- 15.10.93 -->
 - Updated soft_fail in the case of chef-server chef-server-only and ha-… [#4150](https://github.com/chef/chef-server/pull/4150) ([jashaik](https://github.com/jashaik)) <!-- 15.10.92 -->
 <!-- release_rollup -->
 
